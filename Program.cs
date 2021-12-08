@@ -13,8 +13,8 @@ namespace Airport
             var plane3 = new Airplane("plane3", controlTower);
             var plane4 = new Airplane("plane4", controlTower);
 
-            plane3.RequestLanding();
-            plane2.RequestLanding();
+            plane1.RequestLanding();
+            plane1.RequestLanding();
             plane4.RequestTakeOff();
             plane1.RequestTakeOff();
 

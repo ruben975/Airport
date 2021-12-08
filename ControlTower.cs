@@ -36,12 +36,18 @@ namespace Airport
 
         public void TakeOffRequest(IAirplane airplane)
         {
-            _orderPlanes.Add(airplane); airplane.Status = "WantsTakeOff";
+            if (!_orderPlanes.Contains(airplane))
+            {
+                _orderPlanes.Add(airplane); airplane.Status = "WantsTakeOff";
+            }
         }
 
         public void LandRequest(IAirplane airplane)
         {
-            _orderPlanes.Add(airplane); airplane.Status = "WantsLand";
+            if (!_orderPlanes.Contains(airplane))
+            {
+                _orderPlanes.Add(airplane); airplane.Status = "WantsLand";
+            }
         }
 
         public void Register(IAirplane airplane)
