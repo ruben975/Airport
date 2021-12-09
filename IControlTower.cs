@@ -9,7 +9,7 @@ namespace Airport
     public interface IControlTower
     {
         public void Register(IAirplane airplane);
-        
+        public void CompleteRequests();
         public void TakeOffRequest(IAirplane airplane);
         public void LandRequest(IAirplane airplane);
 
